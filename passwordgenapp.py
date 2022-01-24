@@ -15,7 +15,7 @@ from PyDictionary import PyDictionary
 dict = PyDictionary()
 
 pw_length = int(input("Please enter the desired number of characters in your password: "))
-assert isinstance(pw_length, int), "ERROR: Your entry was not a number."
+assert isinstance(pw_length, int) and pw_length > 0, "ERROR: Your entry was not valid."
 
 case = input("Is this password case-sensitive? (Type Y if yes, N if NO): ")
 assert case == "Y" or case == "N", "ERROR: Your entry was not Y or N."
